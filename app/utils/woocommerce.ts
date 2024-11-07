@@ -1,9 +1,9 @@
 // src/utils/woocommerce.ts
 import axios from 'axios';
 
-const BASE_URL = process.env.WOOCOMMERCE_BASE_URL || '';
-const CONSUMER_KEY = process.env.WOOCOMMERCE_CONSUMER_KEY || '';
-const CONSUMER_SECRET = process.env.WOOCOMMERCE_CONSUMER_SECRET || '';
+const BASE_URL = context.env.WOOCOMMERCE_BASE_URL || '';
+const CONSUMER_KEY = context.env.WOOCOMMERCE_CONSUMER_KEY || '';
+const CONSUMER_SECRET = context.env.WOOCOMMERCE_CONSUMER_SECRET || '';
 
 const woocommerceAPI = axios.create({
   baseURL: BASE_URL,
