@@ -14,7 +14,7 @@ export default function ProductsPage() {
 
   return (
     <div className="product-page">
-      <h1 className="page-title">Our Products</h1>
+      <h1 className="page-title">Our Products </h1>
       <div className="product-grid">
         {products.map((product) => {
           // Check if product has images and set a fallback image if not

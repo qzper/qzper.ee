@@ -23,4 +23,14 @@ export interface Post {
     };
     date: string;
     [key: string]: unknown;
+}
+
+export interface CloudflareContext {
+    cloudflare: {
+        env: {
+            WOOCOMMERCE_BASE_URL: string;
+            WOOCOMMERCE_CONSUMER_KEY: string;
+            WOOCOMMERCE_CONSUMER_SECRET: string;
+        };
+    };
   }
