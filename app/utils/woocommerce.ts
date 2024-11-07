@@ -1,9 +1,10 @@
 // src/utils/woocommerce.ts
 import axios from 'axios';
 
-const BASE_URL = context.env.WOOCOMMERCE_BASE_URL || '';
-const CONSUMER_KEY = context.env.WOOCOMMERCE_CONSUMER_KEY || '';
-const CONSUMER_SECRET = context.env.WOOCOMMERCE_CONSUMER_SECRET || '';
+// Use ENV to access environment variables in Cloudflare Workers
+const BASE_URL = ENV.WOOCOMMERCE_BASE_URL || '';
+const CONSUMER_KEY = ENV.WOOCOMMERCE_CONSUMER_KEY || '';
+const CONSUMER_SECRET = ENV.WOOCOMMERCE_CONSUMER_SECRET || '';
 
 const woocommerceAPI = axios.create({
   baseURL: BASE_URL,
