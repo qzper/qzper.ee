@@ -4,9 +4,9 @@ import { CloudflareContext } from './types';
 
 // Using the context to access Cloudflare environment variables
 export const getProducts = async ({ context }: { context: CloudflareContext }) => {
-  const BASE_URL = process.env.WOOCOMMERCE_BASE_URL || context.cloudflare.env.WOOCOMMERCE_BASE_URL;
-  const CONSUMER_KEY = process.env.WOOCOMMERCE_CONSUMER_KEY || context.cloudflare.env.WOOCOMMERCE_CONSUMER_KEY;
-  const CONSUMER_SECRET = process.env.WOOCOMMERCE_CONSUMER_SECRET || context.cloudflare.env.WOOCOMMERCE_CONSUMER_SECRET;
+  const BASE_URL = context.cloudflare.env.WOOCOMMERCE_BASE_URL;
+  const CONSUMER_KEY = context.cloudflare.env.WOOCOMMERCE_CONSUMER_KEY;
+  const CONSUMER_SECRET = context.cloudflare.env.WOOCOMMERCE_CONSUMER_SECRET;
 
   const woocommerceAPI = axios.create({
     baseURL: BASE_URL,
@@ -27,9 +27,9 @@ export const getProducts = async ({ context }: { context: CloudflareContext }) =
 
 // Fetch a single product by ID
 export const getProduct = async (id: number, { context }: { context: CloudflareContext }) => {
-  const BASE_URL = process.env.WOOCOMMERCE_BASE_URL || context.cloudflare.env.WOOCOMMERCE_BASE_URL;
-  const CONSUMER_KEY = process.env.WOOCOMMERCE_CONSUMER_KEY || context.cloudflare.env.WOOCOMMERCE_CONSUMER_KEY;
-  const CONSUMER_SECRET = process.env.WOOCOMMERCE_CONSUMER_SECRET || context.cloudflare.env.WOOCOMMERCE_CONSUMER_SECRET;
+  const BASE_URL = context.cloudflare.env.WOOCOMMERCE_BASE_URL;
+  const CONSUMER_KEY = context.cloudflare.env.WOOCOMMERCE_CONSUMER_KEY;
+  const CONSUMER_SECRET = context.cloudflare.env.WOOCOMMERCE_CONSUMER_SECRET;
 
   const woocommerceAPI = axios.create({
     baseURL: BASE_URL,
