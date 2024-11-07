@@ -1,5 +1,5 @@
 // app/routes/products.tsx
-import { json, LoaderFunction } from '@remix-run/node';
+import { json, LoaderFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react';
 import { getProducts } from '~/utils/woocommerce';
 import type { Product } from '~/utils/types';

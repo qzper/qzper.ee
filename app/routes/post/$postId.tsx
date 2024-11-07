@@ -1,5 +1,5 @@
 // app/routes/post/$postId.tsx
-import { json, LoaderFunction } from "@remix-run/node";
+import { json, LoaderFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from "@remix-run/react";
 import type { Post } from "~/utils/types";
 

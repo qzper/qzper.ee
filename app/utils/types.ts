@@ -1,12 +1,13 @@
 export interface Product {
     id: number;
+    name: string;
     title: {
       rendered: string;
     };
     price: string;
     description: string;
     images: { src: string }[];
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 export interface Post {

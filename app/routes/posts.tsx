@@ -1,4 +1,4 @@
-import { json, LoaderFunction } from "@remix-run/node";
+import { json, LoaderFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from "@remix-run/react";
 import type { Post } from "~/utils/types";  // Assuming you have the Post type defined in types.ts
 
