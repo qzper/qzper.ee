@@ -4,8 +4,8 @@ import { useLoaderData } from '@remix-run/react';
 import { getProducts } from '~/utils/woocommerce';
 import type { Product } from '~/utils/types';
 
-export const loader: LoaderFunction = async () => {
-  const products: Product[] = await getProducts();
+export const loader: LoaderFunction = async ({ context }) => {
+  const products: Product[] = await getProducts({ context });
   return json({ products });
 };
 
