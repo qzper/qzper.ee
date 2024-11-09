@@ -1,10 +1,10 @@
 // app/routes/products.tsx
-import { json, LoaderFunction } from '@remix-run/cloudflare'
+import { json, LoaderFunctionArgs } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react';
 import { getProducts } from '~/utils/woocommerce';
 import type { Product } from '~/utils/types';
 
-export const loader: LoaderFunction = async ({ context }: { context: any}) => {
+export const loader = async ({ context }: { context: LoaderFunctionArgs}) => {
     const products: Product[] = await getProducts({ context });
     return json({ products });
 };

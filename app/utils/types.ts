@@ -1,14 +1,14 @@
-export interface Product {
+export type Product = {
     id: number;
     name: string;
-    title: {
-      rendered: string;
-    };
-    price: string;
+    slug: string;
     description: string;
-    images: { src: string }[];
-    [key: string]: unknown;
-}
+    price: string;
+    regular_price: string;
+    sale_price: string;
+    status: string;
+    images: Array<{ src: string; alt: string }>;
+  };
 
 export interface Post {
     id: number;
@@ -24,13 +24,3 @@ export interface Post {
     date: string;
     [key: string]: unknown;
 }
-
-export interface CloudflareContext {
-    cloudflare: {
-        env: {
-            WOOCOMMERCE_BASE_URL: string;
-            WOOCOMMERCE_CONSUMER_KEY: string;
-            WOOCOMMERCE_CONSUMER_SECRET: string;
-        };
-    };
-  }
